@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prediction</title>
+    <title>Prediction | Titanic predictor</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mvp.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <h1>Results Page</h1>
-    <p>Result is:</p>
-    <p>{{ prediction }}</p>
-    <a href="{% url 'home' %}">Back to Home</a>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}"><img alt="Logo" src="{% static 'logo.png' %}" height="70"></a>
+            <ul>
+                <li><a href="{% url 'home' %}">HTML form</a></li>
+                <li><a href="#">REST API</a></li>
+                <li><a href="#">Other</a></li>
+            </ul>
+        </nav>
+        <h1>Did they survive?</h1>
+        <p>Prediction is: </p>
+        <p id="prediction"> 
+            {% if prediction == "Not Survived" %}⚰️ {% else %}🙌 {% endif %} 
+            {{ prediction }}
+            {% if prediction == "Not Survived" %}⚰️ {% else %}🙌 {% endif %} 
+        </p>
+        <br>
+        <a href="{% url 'home' %}"><b>&larr; Back to Home</b></a>
+    </header>
 </body>
 </html>

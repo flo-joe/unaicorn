@@ -5,6 +5,9 @@ from . import ml_predict
 def home(request):
     return render(request, 'index.html')
 
+def about(request):
+    return render(request, 'about.html')
+
 def result(request):
     try:
         pclass = int(request.GET["pclass"])

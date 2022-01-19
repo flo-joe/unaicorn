@@ -1,0 +1,11 @@
+{% extends "rest_framework/base.html" %}
+
+{% block branding %}
+    <a class='navbar-brand' rel="nofollow" href='#'>Titanic Prediction API</a>
+{% endblock branding %}
+
+{% block userlinks %}
+    <li>
+        <a href='{% url 'home' %}'>Home</a>
+    </li>
+{% endblock userlinks %}

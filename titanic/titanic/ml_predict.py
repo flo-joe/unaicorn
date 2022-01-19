@@ -1,7 +1,10 @@
+from api.apps import ApiConfig
+
 def prediction_model(pclass,sex,age,sibsp,parch,fare,embarked,title):
-    import pickle
+    #import pickle
+    #randomforest = pickle.load(open('titanic/titanic_model.sav', 'rb'))
     x = [[pclass,sex,age,sibsp,parch,fare,embarked,title]]
-    randomforest = pickle.load(open('titanic/titanic_model.sav', 'rb'))
+    randomforest = ApiConfig.randomforest
     prediction = randomforest.predict(x)
     if prediction == 0:
         prediction = 'Not Survived'

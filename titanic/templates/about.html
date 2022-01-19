@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Titanic predictor</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mvp.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}"><img alt="Logo" src="{% static 'logo.png' %}" height="70"></a>
+            <ul>
+                <li><a href="{% url 'home' %}">HTML form</a></li>
+                <li><a href="{% url 'titanic_prediction' %}">REST API</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </nav>
+        <h1>About</h1>
+        <p>A simple application that implements a Machine Learning (ML) model to predict whether or not fictitious passengers would survive the Titanic voyage.</p>
+        
+    </header>
+    <main>
+        <hr class="about_hr">
+        <article>
+            <h2>Resources Used</h2>
+            <h3>Technology</h3>
+            <ul>
+                <li>Language: Python</li>
+                <li>Frameworks: Django, Django REST Framework</li>
+                <li>Data Science and AI/ML: Pandas, Numpy, Scikit-Learn</li>
+            </ul>
+            <h3>Hosting</h3>
+            <ul>
+                <li>Cloud Provider: MS Azure</li>
+                <li>Web Server: Nginx + Gunicorn</li>
+            </ul>
+            <h3>Training</h3>
+            <ul>
+                <li>Learning Django (LinkedIn Learning)</li>
+                <li>Creating Python APIs Like a BOSS: The Django REST Framework (Udemy)</li>
+                <li>Full stack web development and AI with Python (Udemy)</li>
+            </ul>
+            <h3>Others</h3>
+            <ul>
+                <li>REST article: <a target="_blank" href="https://betterprogramming.pub/create-a-machine-learning-api-with-django-rest-framework-967571640c46">Creating a Machine Learning API With Django REST Framework &nearr;</a></li>
+                <li>Minimal CSS stylesheet: <a target="_blank" href="https://andybrewer.github.io/mvp/">MVP.css &nearr;</a></li>
+                <li><a target="_blank" href="https://www.pngfind.com/freepng/cruise-ship-png/">Ship image for logo &nearr;</a></li>
+            </ul>
+        </article>
+    </main>
+</body>
+</html>

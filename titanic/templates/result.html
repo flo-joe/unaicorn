@@ -15,16 +15,16 @@
             <a href="{% url 'home' %}"><img alt="Logo" src="{% static 'logo.png' %}" height="70"></a>
             <ul>
                 <li><a href="{% url 'home' %}">HTML form</a></li>
-                <li><a href="#">REST API</a></li>
-                <li><a href="#">Other</a></li>
+                <li><a href="{% url 'titanic_prediction' %}">REST API</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
             </ul>
         </nav>
         <h1>Did they survive?</h1>
         <p>Prediction is: </p>
         <p id="prediction"> 
-            {% if prediction == "Not Survived" %}⚰️ {% else %}🙌 {% endif %} 
+            {% if prediction == "Not Survived" %}⚰️ {% elif prediction == "Survived" %}🙌 {% else %}🤦‍♂️ {% endif %} 
             {{ prediction }}
-            {% if prediction == "Not Survived" %}⚰️ {% else %}🙌 {% endif %} 
+            {% if prediction == "Not Survived" %}⚰️ {% elif prediction == "Survived" %}🙌 {% else %}🤦‍♀️ {% endif %} 
         </p>
         <br>
         <a href="{% url 'home' %}"><b>&larr; Back to Home</b></a>

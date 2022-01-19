@@ -1,6 +1,9 @@
 .error {
     color: #ff4242;
 }
+.about_hr {
+    margin: 1rem 0rem 4rem 0rem;
+}
 #prediction {
     font-size: 1.3em
 }
